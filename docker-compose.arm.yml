@@ -1,0 +1,15 @@
+services:
+  db:
+    platform: linux/amd64
+
+  rails:
+    platform: linux/arm64/v8
+    build:
+      args:
+        - DISTRO=linux-arm64
+
+  web:
+    platform: linux/arm64/v8
+    build:
+      args:
+        - DISTRO=linux-arm64
